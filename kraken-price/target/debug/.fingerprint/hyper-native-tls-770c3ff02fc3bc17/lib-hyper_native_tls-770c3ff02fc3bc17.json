@@ -1,0 +1,1 @@
+{"rustc":5105358705442676925,"features":"[]","target":6437697961870430321,"profile":11870183705523825133,"path":18428191032026549436,"deps":[["antidote v1.0.0","antidote",3293053145584293156],["hyper v0.10.15","hyper",6679909976841344943],["native-tls v0.1.5","native_tls",2053128775501707660]],"local":[{"Precalculated":"0.2.4"}],"rustflags":[],"edition":"Edition2015"}

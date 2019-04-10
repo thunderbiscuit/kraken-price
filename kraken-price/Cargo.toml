@@ -5,3 +5,4 @@ authors = ["thunderB <thunderB@protonmail.com>"]
 edition = "2018"
 
 [dependencies]
+requests = "0.0.30"
