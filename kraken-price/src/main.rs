@@ -1,3 +1,9 @@
+use std::env;
+
 fn main() {
-    println!("Hello, world!");
+    let args: Vec<String> = env::args().collect();
+
+    let coin = &args[1];
+
+    println!("the coin requested is {}", coin);
 }
