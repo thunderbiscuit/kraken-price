@@ -3,6 +3,12 @@ name = "kraken-price"
 version = "0.1.0"
 authors = ["thunderB <thunderB@protonmail.com>"]
 edition = "2018"
+license = "CC0-1.0"
+description = "A cli tool to query Kraken for the latest btc-usd price."
+readme = "README.md"
+homepage = "https://github.com/thunder-B/kraken-price"
+repository = "https://github.com/thunder-B/kraken-price"
+keywords = ["cli", "kraken", "bitcoin"]
 
 [dependencies]
 requests = "0.0.30"
