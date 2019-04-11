@@ -6,3 +6,4 @@ edition = "2018"
 
 [dependencies]
 requests = "0.0.30"
+webbrowser = "0.5.1"

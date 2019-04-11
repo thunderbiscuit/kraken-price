@@ -1,6 +1,7 @@
 use std::env;
 use requests;
 use requests::ToJson;
+use webbrowser;
 
 fn main() {
     // collect command line argument if given
@@ -20,7 +21,11 @@ fn main() {
             let price_sats: u32 = (price * 100000000.0) as u32;
             println!("{} sats", price_sats);
         }
-        _ => println!("something else")
+        _ => {
+            webbrowser::open("https://www.youtube.com/watch?v=dQw4w9WgXcQ").is_ok();
+            println!("You got Rick Rolled");
+            // println!("Surpirse motherfather");
+        }
     }
 }
 
