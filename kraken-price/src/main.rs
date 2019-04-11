@@ -15,6 +15,10 @@ fn main() {
             let price = query_api(arg1);
             println!("{}", price);
         },
+        "doge" => {
+            let price = query_api(arg1);
+            println!("{}", price);
+        },
         _ => println!("something else")
     }
 }
@@ -36,9 +40,14 @@ fn query_api(coin: &String) -> String {
             let full_data = response.json().unwrap();
             price = full_data["result"]["XXBTZUSD"]["c"][0].to_string();
         },
+        "doge" => {
+            let url = concat!("https://api.kraken.com/0/public/Ticker?pair=", "XXDGXXBT");
+            let response = requests::get(url).unwrap();
+            let full_data = response.json().unwrap();
+            price = full_data["result"]["XXDGXXBT"]["c"][0].to_string();
+        },
         _ => {
             price = String::from("not a valid coin");
-            println!("not a coin");
         }
     }
 
