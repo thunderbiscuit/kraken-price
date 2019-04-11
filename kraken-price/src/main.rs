@@ -7,14 +7,12 @@ fn main() {
     // collect command line argument if given
     let args: Vec<String> = env::args().collect();
 
-    // if no argument was given
+    // no argument was given
     if args.len() < 2 {
         let price: f64 = query_api(&String::from("btc")).parse().unwrap();
         println!("$ {}", price);
-    }
-
-    // if argument was given
-    if args.len() > 1 {
+    } else {
+        // argument was given
         let arg = &args[1];
 
         // execute query on bitcoin and doge, Rick Roll anything else
