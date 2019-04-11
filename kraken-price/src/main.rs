@@ -23,8 +23,7 @@ fn main() {
         }
         _ => {
             webbrowser::open("https://www.youtube.com/watch?v=dQw4w9WgXcQ").is_ok();
-            println!("You got Rick Rolled");
-            // println!("Surpirse motherfather");
+            println!("Surprise monkeyfighter.");
         }
     }
 }
