@@ -11,15 +11,15 @@ fn main() {
 
     // execute query on bitcoin and doge, Rick Roll anything else
     match arg.as_str() {
-        "btc" => {
+        "btc" | "bitcoin" => {
             let price: f64 = query_api(arg).parse().unwrap();
             println!("$ {}", price);
-        }, 
+        }
         "doge" => {
             let price: f64 = query_api(arg).parse().unwrap();
             let price_sats: u32 = (price * 100000000.0) as u32;
             println!("{} sats", price_sats);
-        },
+        }
         _ => println!("something else")
     }
 }
@@ -34,18 +34,18 @@ fn query_api(coin: &String) -> String {
     let price;
 
     match coin.as_str() {
-        "btc" => {
+        "btc" | "bitcoin" => {
             let url = concat!("https://api.kraken.com/0/public/Ticker?pair=", "XBTUSD");
             let response = requests::get(url).unwrap();
             let full_data = response.json().unwrap();
             price = full_data["result"]["XXBTZUSD"]["c"][0].to_string();
-        },
+        }
         "doge" => {
             let url = concat!("https://api.kraken.com/0/public/Ticker?pair=", "XXDGXXBT");
             let response = requests::get(url).unwrap();
             let full_data = response.json().unwrap();
             price = full_data["result"]["XXDGXXBT"]["c"][0].to_string();
-        },
+        }
         _ => {
             price = String::from("not a valid coin");
         }
