@@ -7,17 +7,18 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     // if argument was given put it into variable arg
-    let arg1 = &args[1];
+    let arg = &args[1];
 
     // execute query on bitcoin and doge, Rick Roll anything else
-    match arg1.as_str() {
+    match arg.as_str() {
         "btc" => {
-            let price = query_api(arg1);
-            println!("{}", price);
-        },
+            let price: f64 = query_api(arg).parse().unwrap();
+            println!("$ {}", price);
+        }, 
         "doge" => {
-            let price = query_api(arg1);
-            println!("{}", price);
+            let price: f64 = query_api(arg).parse().unwrap();
+            let price_sats: u32 = (price * 100000000.0) as u32;
+            println!("{} sats", price_sats);
         },
         _ => println!("something else")
     }
@@ -28,7 +29,6 @@ fn main() {
 
 fn query_api(coin: &String) -> String {
     // let baseURL = "https://api.kraken.com/0/public/Ticker?pair=";
-    // let url = "https://api.kraken.com/0/public/Ticker?pair=XBTUSD";
 
     // let response;
     let price;
@@ -54,6 +54,5 @@ fn query_api(coin: &String) -> String {
 
 
     // println!("{}", response.status_code());
-    // println!("$ {}", price);
     price
 }
