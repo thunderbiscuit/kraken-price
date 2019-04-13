@@ -9,11 +9,11 @@ kraken-price --help
 ```
 
 ## Compile the binaries yourself
-If you have _Rust_ installed on your computer, you can easily use the tool by compiling the binaries yourself;
-1. clone this repository locally
-2. enter the repo
-3. use `cargo run`
-4. move the compiled binary to your `usr/local/bin` directory (MacOS and Linux)
+Kraken-price is written in Rust, so you'll need to grab a [Rust installation](https://www.rust-lang.org/) in order to compile it. Once you have Rust installed on your computer, you can easily use the tool by compiling the binaries yourself like so;
+1. clone this repository locally;
+2. enter the repo;
+3. use `cargo build --release`;
+4. move the compiled binary in your PATH (for MacOS and Linux, the default directory for those binaries would be `usr/local/bin`);
 5. run using `kraken-price` in your command line, or rename the file your preferred command if you wish to use a different one.
 
 ```bash
@@ -21,7 +21,7 @@ git clone https://github.com/thunder-B/kraken-price
 cd kraken-price
 cargo build --release
 cd ./target/release/bin/
-cp ./kraken-price /usr/local/bin/
+cp ./kraken-price /usr/local/bin/    # MacOS and Linux
 
 # test it out!
 kraken-price dentacoin
