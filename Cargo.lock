@@ -117,7 +117,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "kraken-price"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "requests 0.0.30 (registry+https://github.com/rust-lang/crates.io-index)",
  "webbrowser 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
