@@ -31,6 +31,9 @@ kraken-price dentacoin
 The binary crate is also released on [crates.io](https://crates.io/), which means you can install it directly from cargo (note that the binaries will then be built in release mode and put into your `~/.cargo/bin/` directory);
 ```bash
 cargo install kraken-price
+
+# test it out!
+kraken-price dentacoin
 ```
 
 ## Download the binaries from Github
