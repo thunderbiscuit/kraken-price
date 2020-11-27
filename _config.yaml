@@ -1,4 +1,4 @@
-remote_theme:  pmarsceill/just-the-docs
+remote_theme: thunderbiscuit/just-the-docs/tree/kotlin-study-custom
 
 # theme configurations
 search_enabled: true
