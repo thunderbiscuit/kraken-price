@@ -1,4 +1,4 @@
-remote_theme: thunderbiscuit/just-the-docs
+remote_theme:  pmarsceill/just-the-docs
 
 # theme configurations
 search_enabled: true
