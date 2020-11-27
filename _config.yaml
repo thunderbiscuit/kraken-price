@@ -1,5 +1,4 @@
 remote_theme: thunderbiscuit/just-the-docs
 
 # theme configurations
-# needed a new commit
 search_enabled: true
